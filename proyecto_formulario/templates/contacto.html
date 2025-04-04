@@ -1,8 +1,15 @@
+
+<!-- Este archivo HTML representa la parte visual del formulario de contacto. -->
+<!-- Utiliza Bootstrap para el diseño y la estructura. -->
+<!-- El formulario envía los datos a la ruta '/submit_contacto' mediante el método POST. -->
+<!-- El archivo también incluye un enlace para volver a la página principal. -->
+<!-- Se hace el diseño de manera estetica y que sea agradable a la vista, además de ser intuitivo-->
+
 <!DOCTYPE html>
 <html lang="es">
-<head>
+<head> 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Contacto</title>
     <style>
         body {
@@ -12,7 +19,7 @@
             align-items: center; /* Centra verticalmente */
             min-height: 100vh; /* Asegura que el cuerpo tenga al menos la altura de la ventana */
             margin: 0; /* Elimina el margen por defecto */
-            background-color: rgb(207, 103, 12); /* Color de fondo opcional */
+            background-color: rgb(207, 103, 12); /* Color de fondo */
         }
         h1 {
             margin-bottom: 20px; /* Espaciado inferior para el título */
@@ -59,7 +66,7 @@
 </head>
 <body>
     <h1>Formulario de contacto</h1>
-    <form action="{{ url_for('submit_contacto') }}" method="POST"> <!-- Cambiado a submit_contacto -->
+    <form action="{{ url_for('submit_contacto') }}" method="POST">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
         <label for="email">Email:</label>
