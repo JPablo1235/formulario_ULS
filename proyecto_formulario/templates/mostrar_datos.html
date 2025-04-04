@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Datos</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* Coloca los elementos en una columna */
+            justify-content: center; /* Centra verticalmente */
+            align-items: center; /* Centra horizontalmente */
+            min-height: 100vh; /* Asegura que el cuerpo tenga al menos la altura de la ventana */
+            margin: 0; /* Elimina el margen por defecto */
+            background-color: rgb(207, 103, 12); /* Color de fondo */
+            color: white; /* Color del texto */
+        }
+        table {
+            width: 80%; /* Ancho de la tabla */
+            border-collapse: collapse; /* Colapsa los bordes de la tabla */
+            margin-top: 20px; /* Espaciado superior */
+        }
+        th, td {
+            border: 1px solid #ffffff; /* Borde de las celdas */
+            padding: 10px; /* Espaciado interno */
+            text-align: center; /* Centra el texto en las celdas */
+        }
+        th {
+            background-color: #007BFF; /* Color de fondo de los encabezados */
+        }
+        a {
+            margin-top: 20px; /* Espaciado superior para el enlace "Volver" */
+            color: white; /* Color del texto del enlace */
+            text-decoration: none; /* Sin subrayado */
+            padding: 10px 20px; /* Espaciado interno */
+            background-color: #007BFF; /* Color de fondo del enlace */
+            border-radius: 4px; /* Bordes redondeados */
+            display: inline-block; /* Permite aplicar padding */
+            transition: background-color 0.3s; /* Transición suave para el color de fondo */
+        }
+        a:hover {
+            background-color: #0056b3; /* Color de fondo al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+    <h1>Datos de Contacto</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Mensaje</th>
+        </tr>
+        {% for contacto in contactos %}
+        <tr>
+            <td>{{ contacto[0] }}</td>
+            <td>{{ contacto[1] }}</td>
+            <td>{{ contacto[2] }}</td>
+            <td>{{ contacto[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Volver a la página principal</a>
+</body>
+</html>

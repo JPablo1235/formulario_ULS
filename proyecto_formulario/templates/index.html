@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de contacto U La Salle</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* Coloca los elementos en una columna */
+            justify-content: space-between; /* Espacia los elementos para que ocupen el espacio disponible */
+            min-height: 100vh; /* Asegura que el cuerpo tenga al menos la altura de la ventana */
+            margin: 0; /* Elimina el margen por defecto */
+            background-color: rgb(207, 103, 12);
+            color: white; /* Cambia el color del texto a blanco para mejor contraste */
+        }
+        img {
+            display: block; /* Cambia el comportamiento de la imagen a bloque */
+            margin: 0 auto; /* Aplica márgenes automáticos a los lados */
+        }
+        .footer {
+            text-align: left; /* Alinea el texto a la izquierda */
+            padding: 10px; /* Espaciado alrededor del texto */
+            color: #ffffff; /* Color del texto */
+        }
+        .center {
+            text-align: center; /* Centra el contenido dentro del div */
+        }
+        .button {
+            display: inline-block; /* Permite aplicar padding y margin */
+            padding: 10px 20px; /* Espaciado interno */
+            background-color: #007BFF; /* Color de fondo del botón */
+            color: white; /* Color del texto */
+            text-decoration: none; /* Sin subrayado */
+            border-radius: 4px; /* Bordes redondeados */
+            margin-top: 10px; /* Espaciado superior */
+            transition: background-color 0.3s; /* Transición suave para el color de fondo */
+        }
+        .button:hover {
+            background-color: #0056b3; /* Color de fondo al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+    <h1 class="center">Bienvenido al Formulario de contacto U La Salle</h1>
+    <hr>
+    <div class="center">
+        <a href="https://lasalle.edu.co/es">
+            <img src="{{ url_for('static', filename='ULS_banner.jpg') }}" width="800" height="400" alt="Banner de U La Salle">
+        </a>
+    </div>
+    <div class="center">
+        <a href="/contacto" class="button">Contactar</a>
+        <a href="/mostrar_datos" class="button">Mostrar datos en tabla</a> <!-- Nuevo botón -->
+    </div>
+    <div class="footer">
+        <h3>Hecho por: Juan Pablo Sanchez Nieto</h3>
+    </div>
+</body>
+</html>
