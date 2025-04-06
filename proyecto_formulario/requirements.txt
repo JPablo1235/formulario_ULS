@@ -1,0 +1,14 @@
+flask
+python-dotenv
+gunicorn
+flask-cors
+flask-socketio
+flask-socketio[asyncio]
+flask-socketio[gevent]
+flask-socketio[threading]
+flask-socketio[gevent_websocket]
+flask-socketio[gevent_uwsgi, eventlet]
+flask-sqlalchemy
+flask-migrate
+flask-wtf
+flask-mail
