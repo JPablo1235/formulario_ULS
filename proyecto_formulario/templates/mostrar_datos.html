@@ -45,20 +45,22 @@
     </style>
 </head>
 <body>
-    <h1>Datos de Contacto</h1>
-    <table>
+    <h1>Datos de Contacto</h1> <!-- Titulo de la pagina -->
+    <table> <!-- Tabla para mostrar los datos -->
+        <!-- Encabezados de la tabla -->
         <tr>
             <th>ID</th>
             <th>Nombre</th>
             <th>Email</th>
             <th>Mensaje</th>
-        </tr>
-        {% for contacto in contactos %}
+        </tr> 
+        {% for contacto in contactos %} <!-- Itera sobre cada contacto en la lista de contactos -->
+        <!-- Cada fila de la tabla representa un contacto -->
         <tr>
-            <td>{{ contacto[0] }}</td>
-            <td>{{ contacto[1] }}</td>
-            <td>{{ contacto[2] }}</td>
-            <td>{{ contacto[3] }}</td>
+            <td>{{ contacto.id }}</td> <!-- ID del contacto (generado automaticamente) -->
+            <td>{{ contacto.nombre }}</td> <!-- Nombre del contacto -->
+            <td>{{ contacto.email }}</td> <!-- Email del contacto -->
+            <td>{{ contacto.mensaje }}</td> <!--mensaje del contacto -->
         </tr>
         {% endfor %}
     </table>
